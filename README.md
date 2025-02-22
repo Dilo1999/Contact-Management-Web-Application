@@ -83,57 +83,57 @@ Install dependencies:
 
 npm start
 
-Set Up the Frontend
-
-Navigate to the frontend directory:
-
-cd ../frontend
-
-Install dependencies:
-
-npm install
-
-Start the development server:
-
-npm start
-
-Access the application at: http://localhost:3000.
+        Set Up the Frontend
+        
+        Navigate to the frontend directory:
+        
+        cd ../frontend
+        
+        Install dependencies:
+        
+        npm install
+        
+        Start the development server:
+        
+        npm start
+        
+        Access the application at: http://localhost:3000.
 
 Docker Deployment
 
-You can also deploy the application using Docker:
-
-Build the Docker image:
-
-docker build -t contact-management-app .
-
-Run the Docker container:
-
-docker run -p 3000:3000 contact-management-app
-
-Access the application at: http://localhost:3000.
+        You can also deploy the application using Docker:
+        
+        Build the Docker image:
+        
+        docker build -t contact-management-app .
+        
+        Run the Docker container:
+        
+        docker run -p 3000:3000 contact-management-app
+        
+        Access the application at: http://localhost:3000.
 
 Jenkins CI/CD Pipeline
 
-The project includes a Jenkins pipeline for automated builds and deployments:
+        The project includes a Jenkins pipeline for automated builds and deployments:
+        
+        Pipeline Steps
+        
+        SCM Checkout: The pipeline fetches the latest code from GitHub.
+        
+        Build Docker Image: The pipeline builds a Docker image for the application.
+        
+        Deploy: The Docker image is deployed to a container.
 
-Pipeline Steps
-
-SCM Checkout: The pipeline fetches the latest code from GitHub.
-
-Build Docker Image: The pipeline builds a Docker image for the application.
-
-Deploy: The Docker image is deployed to a container.
-
-Setup Instructions
-
-Ensure Jenkins is installed and configured.
-
-Create a new pipeline job in Jenkins.
-
-Paste the provided Jenkinsfile into the pipeline configuration.
-
-Acknowledgments
+        Setup Instructions
+        
+        Ensure Jenkins is installed and configured.
+        
+        Create a new pipeline job in Jenkins.
+        
+        Paste the provided Jenkinsfile into the pipeline configuration.
+        
+        Acknowledgments
 
 This project leverages the following technologies:
 
