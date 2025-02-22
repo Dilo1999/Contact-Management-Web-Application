@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+Contact Management Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for managing contacts, built with React for the frontend and Node.js with Express for the backend. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on contacts, including uploading profile images.
 
-## Available Scripts
+Features
+Create Contacts: Add new contacts with details like name, address, email, and profile image.
 
-In the project directory, you can run:
+Read Contacts: View a list of all contacts with their details and profile images.
 
-### `npm start`
+Update Contacts: Edit existing contact details and update profile images.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Delete Contacts: Remove contacts from the list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Image Upload: Upload and display profile images for contacts.
 
-### `npm test`
+Responsive Design: Built with Bootstrap for a mobile-friendly user interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technologies Used
+Frontend
+React: JavaScript library for building the user interface.
 
-### `npm run build`
+React Router: For navigation between pages.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Axios: For making HTTP requests to the backend.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bootstrap: For styling and responsive design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend
+Node.js: JavaScript runtime for the backend.
 
-### `npm run eject`
+Express: Web framework for building RESTful APIs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+MySQL: Relational database for storing contact data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Multer: Middleware for handling file uploads.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tools
+Docker: For containerization and deployment.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Jenkins: For CI/CD pipeline automation.
 
-## Learn More
+Installation
+Follow these steps to set up the project locally:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Prerequisites
+Node.js and npm installed on your machine.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MySQL server running locally or remotely.
 
-### Code Splitting
+Docker (optional, for containerized deployment).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Steps
+Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+git clone https://github.com/your-username/contact-management-app.git
+cd contact-management-app
+Set Up the Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Navigate to the backend directory:
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cd backend
+Install dependencies:
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm install
+Set up the MySQL database:
 
-### `npm run build` fails to minify
+Create a database named contacts_db.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Update the MySQL connection settings in server.js if necessary.
+
+Start the server:
+
+
+npm start
+Set Up the Frontend
+
+Navigate to the frontend directory:
+
+
+cd ../frontend
+Install dependencies:
+
+bash
+Copy
+npm install
+Start the development server:
+
+
+npm start
+Access the Application
+
+Open your browser and go to http://localhost:3000 to view the application.
+
+Docker Deployment
+You can also deploy the application using Docker:
+
+Build the Docker Image
+
+
+docker build -t contact-management-app .
+Run the Docker Container
+
+
+docker run -p 3000:3000 contact-management-app
+Access the application at http://localhost:3000.
+
+Jenkins CI/CD Pipeline
+The project includes a Jenkins pipeline for automated builds and deployments. Here's how it works:
+
+SCM Checkout: The pipeline checks out the code from the GitHub repository.
+
+Build Docker Image: The pipeline builds a Docker image for the application.
+
+Deploy: The Docker image is deployed to a container.
+
+To set up the pipeline:
+
+Ensure Jenkins is installed and configured.
+
+Create a new pipeline job in Jenkins and paste the provided Jenkinsfile.
+
+Acknowledgments
+    React
+    
+    Express
+    
+    MySQL
+    
+    Bootstrap
+    
+    Docker
+    
+    Jenkins
